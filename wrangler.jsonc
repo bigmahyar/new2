@@ -1,0 +1,27 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "new2",
+  "main": "worker.js",
+  "compatibility_date": "2026-07-30",
+  "compatibility_flags": ["nodejs_compat"],
+  "d1_databases": [
+    { "binding": "DB","database_id": "9db608a0-8ef9-4cbf-be7c-fa583aa6c8f0","database_name": "new2" }
+  ],
+  "kv_namespaces": [
+    { "binding": "KV","id": "57a43586eb8240048b26f8d677804436" }
+  ],
+  "workers_dev": true,
+  "preview_urls": true,
+  "observability": {
+    "enabled": true,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "invocation_logs": true
+    },
+    "traces": {
+      "enabled": true,
+      "head_sampling_rate": 0.01
+    }
+  }
+}
